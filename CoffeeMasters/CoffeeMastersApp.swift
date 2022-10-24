@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct CoffeeMastersApp: App {
 	
-	@StateObject var menuManager = MenuManager()
-	@StateObject var cartManager = CartManager()
+	var menuManager = MenuManager()
+	var cartManager = CartManager()
 
 	
     var body: some Scene {

@@ -21,7 +21,7 @@ struct MenuPage: View {
 					
 					ForEach(category.products) { product in
 						ZStack {
-							NavigationLink(destination: DetailsPage()) {
+							NavigationLink(destination: DetailsPage(product: product)) {
 								EmptyView()
 							}.opacity(0)
 							ProductItem(product: product)
