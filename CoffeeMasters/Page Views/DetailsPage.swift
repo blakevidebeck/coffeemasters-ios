@@ -13,6 +13,7 @@ struct DetailsPage: View {
 	var product: Product
 	
 	@EnvironmentObject var cartManager: CartManager
+	@Environment(\.dismiss) var dismiss
 	
 	var body: some View {
 		ScrollView {
@@ -52,6 +53,7 @@ struct DetailsPage: View {
 				// Add button
 			Button("Add \(quantity) to Cart") {
 				cartManager.add(product: product, quantity: quantity)
+				dismiss()
 			}
 			.padding()
 			.frame(width: 250.0)
